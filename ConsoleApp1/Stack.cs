@@ -19,5 +19,30 @@ namespace StackBoilerPlate
         //Creating Stack of Intergers
         int[] stack = new int[MAX];
 
+        //Method To Check if the Stack is Empty
+        bool IsEmpty()
+        {
+            return (top < 0);
+        }
+
+        //Constructer
+        public Stack()
+        {
+            top = -1;
+        }
+
+        bool Push(int data)
+        {
+            if(top >= MAX)
+            {
+                Console.WriteLine("Stack Overflow");
+                return false;
+            }
+            else
+            {
+                stack[++top] = data;
+                return true;
+            }
+        }
     }
 }
