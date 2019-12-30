@@ -13,7 +13,10 @@ namespace StackBoilerPlate
         //"readonly" Makes MAX Unable to be Changed
         static readonly int MAX = 1000;
 
+        //Holds the Place for Each Interger 
         int top;
+
+        //Creating Stack of Intergers
         int[] stack = new int[MAX];
 
     }
