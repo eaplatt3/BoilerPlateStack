@@ -67,17 +67,31 @@ namespace StackBoilerPlate
             }
         }
 
+        //Method to Check what the Top Element Is without Removing it
         void Peek()
         {
+            //Checks if Stack has Data in it
             if(top < 0)
             {
                 Console.WriteLine("Stack Underflow");
                 return;
             }
 
+            //Prints the Top Element in the Stack
             else
             {
                 Console.WriteLine("The Top Element in the Stack is : {0}", stack[top]);
+            }
+        }
+
+      void sortStackTmp()
+        {
+            Stack input = new Stack();
+
+            Stack tempStack = new Stack();
+            while (input.C != 0)
+            {
+               
             }
         }
     }
