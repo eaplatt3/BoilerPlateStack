@@ -12,13 +12,13 @@ using System.Threading.Tasks;
 namespace StackBoilerPlate
 {
     //Stack Class
-    class Stack
+    public class Stack
     {
         //Variable Declaration 
         #region
         //Static for Max Capacity of Stack
         //"readonly" Makes MAX Unable to be Changed
-        static readonly int MAX = 1000;
+        static readonly int MAX = 10;
 
         //Holds the Place for Each Interger 
         int top;
@@ -29,22 +29,24 @@ namespace StackBoilerPlate
 
         //Constructer
         #region
-        public Stack()
+        public Stack(int MAX)
         {
+            stack = new int[MAX];
             top = -1;
+          
         }
         #endregion
 
         //Methods
         #region
         //Method To Check if the Stack is Empty
-        bool IsEmpty()
+        public bool IsEmpty()
         {
             return (top < 0);
         }
 
         //Method to Push Data into the Stack
-        bool Push(int data)
+        public bool Push(int data)
         {
             //Checks if Stack is Full
             if (top >= MAX)
@@ -62,7 +64,7 @@ namespace StackBoilerPlate
         }
 
         //Method to Remove or "Pop" top Element off Stack
-        int Pop()
+        public int Pop()
         {
             //Check if Stack has Data
             if (top < 0)
@@ -80,7 +82,7 @@ namespace StackBoilerPlate
         }
 
         //Method to Check what the Top Element Is without Removing it
-        int Peek()
+        public int Peek()
         {
             //Checks if Stack has Data in it
             if (top < 0)
@@ -98,7 +100,7 @@ namespace StackBoilerPlate
         }
 
         //Method to Print Items in the Stack
-        void printStack()
+        public void printStack()
         {
             //Checks if the Stack has Data in it
             if(top < 0)
